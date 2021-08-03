@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  mycontainer:
+    image: maptiler/tileserver-gl:latest
+    build: .
+    command: --public_url https://example.com/your-subpath/ --no-cors --config /config/config.json
+    ports:
+        - "58080:8080" 
+    volumes:
+      - '/your/mbtiles/path:/data'
+      - '/your/config/folder:/config'
+      - '/your/style/folder:/usr/src/app/node_modules/tileserver-gl-styles'
