@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  mycontainer:
+  tileserver-gl:
     image: maptiler/tileserver-gl:latest
     build: .
     command: --public_url https://example.com/your-subpath/ --no-cors --config /config/config.json

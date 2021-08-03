@@ -1,0 +1,40 @@
+{
+  "options": {
+    "paths": {
+      "root": "/usr/src/app/node_modules/tileserver-gl-styles",
+      "fonts": "fonts",
+      "styles": "styles",
+      "mbtiles": "/data"
+    },
+    "serveStaticMaps": true,
+    "formatQuality": {
+      "jpeg": 85,
+      "webp": 85
+    },
+    "maxSize": 8192,
+    "pbfAlias": "pbf"
+  },
+  "styles": {
+    "basic": {
+      "style": "style/basic.json",
+      "tilejson": {}
+    },
+    "osm-street": {
+      "style": "style/osm-street.json",
+      "tilejson": {}
+    },
+    "osm-bright": {
+        "style": "style/osm-bright.json",
+        "tilejson": {}
+    },
+    "osm-dark": {
+       "style": "style/osm-dark.json",
+       "tilejson": {}
+    }
+  },
+  "data": {
+    "v3": {
+      "mbtiles": "/data/tile.mbtiles"
+    }
+  }
+}
