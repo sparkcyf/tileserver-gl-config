@@ -1,12 +1,13 @@
-version: '3.9'
+version: '3.3'
 services:
   tileserver-gl:
     image: maptiler/tileserver-gl:latest
     build: .
-    command: --public_url https://example.com/your-subpath/ --no-cors --config /config/config.json
+    command: --public_url https://example.com/osm-tile/ --no-cors --config /config/config.json
     ports:
-        - "58080:8080" 
+        - "58085:8080" 
     volumes:
-      - '/your/mbtiles/path:/data'
-      - '/your/config/folder:/config'
-      - '/your/style/folder:/usr/src/app/node_modules/tileserver-gl-styles'
+      - '/data/mirrors-zfs/cra-service/vector-tile-server/map:/data'
+      - '/data/mirrors-zfs/cra-service/vector-tile-server/config:/config'
+      - '/data/mirrors-zfs/cra-service/vector-tile-server/style/styles:/app/node_modules/tileserver-gl-styles/styles'
+      - '/data/mirrors-zfs/cra-service/vector-tile-server/style/fonts:/app/node_modules/tileserver-gl-styles/fonts'
